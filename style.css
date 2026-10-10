@@ -1,0 +1,1592 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+
+    --blue: #185b91;
+    --blue-dark: #104a78;
+
+    --teal: #45b3a2;
+
+    --ink: #16344c;
+
+    --muted: #687786;
+
+    --cream: #f6f8f7;
+
+    --line: #dbe4e9;
+
+    --white: #ffffff;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
+    color: var(--ink);
+
+    background: #ffffff;
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-bottom:
+        1px solid
+        rgba(22, 52, 76, 0.08);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.nav-container {
+
+    max-width: 1280px;
+
+    height: 76px;
+
+    margin: auto;
+
+    padding: 0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 600;
+
+    font-size: 21px;
+
+    color: #17527f;
+}
+
+
+.brand-icon {
+
+    width: 35px;
+
+    height: 35px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #22649b;
+
+    color: white;
+
+    border-radius: 4px;
+
+    font:
+        bold 25px Arial;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 31px;
+
+    color: #526271;
+
+    font-weight: 500;
+}
+
+
+.nav-links a {
+
+    transition: 0.25s;
+}
+
+
+.nav-links a:hover {
+
+    color: var(--blue);
+}
+
+
+.nav-cta {
+
+    background: var(--teal);
+
+    color: white !important;
+
+    padding: 12px 24px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: 0;
+
+    font-size: 28px;
+
+    color: var(--ink);
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 720px;
+
+    margin-top: 76px;
+
+    position: relative;
+
+    background:
+        url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+
+    overflow: hidden;
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(19, 91, 145, 0.94) 0%,
+            rgba(29, 104, 156, 0.75) 42%,
+            rgba(28, 83, 119, 0.18) 100%
+        );
+}
+
+
+.hero-content {
+
+    max-width: 1280px;
+
+    min-height: 720px;
+
+    margin: auto;
+
+    padding:
+        150px
+        28px
+        70px;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    color: white;
+}
+
+
+.hero-copy {
+
+    max-width: 650px;
+}
+
+
+.eyebrow {
+
+    display: inline-block;
+
+    letter-spacing: 1.5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    background:
+        rgba(255,255,255,.18);
+
+    padding:
+        7px 14px;
+
+    border-radius: 20px;
+
+    margin-bottom: 28px;
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    font-size: 62px;
+
+    line-height: 1.05;
+
+    font-weight: 500;
+
+    margin-bottom: 28px;
+}
+
+
+.hero h1 em {
+
+    font-weight: 500;
+}
+
+
+.hero-copy > p {
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    max-width: 640px;
+
+    color:
+        rgba(255,255,255,.9);
+}
+
+
+.hero-actions {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 34px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 0;
+
+    cursor: pointer;
+
+    padding:
+        15px 24px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+
+.btn-primary {
+
+    background: var(--teal);
+
+    color: white;
+}
+
+
+.btn-primary:hover {
+
+    background: #369d8e;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.btn-outline {
+
+    border:
+        1px solid
+        rgba(255,255,255,.7);
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.03);
+}
+
+
+.btn-outline:hover {
+
+    background:
+        rgba(255,255,255,.14);
+}
+
+
+/* =========================
+   HERO STATS
+========================= */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.stat-card {
+
+    min-height: 115px;
+
+    padding: 23px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.5);
+
+    background:
+        rgba(221,237,244,.2);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius: 7px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.stat-card strong {
+
+    font:
+        500 33px
+        "Playfair Display",
+        Georgia,
+        serif;
+}
+
+
+.stat-card span {
+
+    font-size: 14px;
+
+    color:
+        rgba(255,255,255,.9);
+}
+
+
+/* =========================
+   TRUST STRIP
+========================= */
+
+.trust-strip {
+
+    max-width: 1180px;
+
+    margin:
+        -1px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    background: white;
+
+    box-shadow:
+        0 8px 30px
+        rgba(23,59,83,.08);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.trust-strip div {
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-right:
+        1px solid var(--line);
+}
+
+
+.trust-strip div:last-child {
+
+    border: 0;
+}
+
+
+.trust-strip strong {
+
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 23px;
+}
+
+
+.trust-strip span {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding:
+        105px 28px;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-kicker {
+
+    display: inline-block;
+
+    color: #4c9a91;
+
+    letter-spacing: 1.5px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 9px;
+}
+
+
+.section-heading h2,
+.appointment-intro h2 {
+
+    font:
+        500 45px/1.1
+        "Playfair Display",
+        Georgia,
+        serif;
+}
+
+
+.section-heading > p {
+
+    max-width: 430px;
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   DEPARTMENTS
+========================= */
+
+.department-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+}
+
+
+.department-card {
+
+    border:
+        1px solid var(--line);
+
+    padding: 30px;
+
+    min-height: 245px;
+
+    background: white;
+
+    transition: .3s;
+}
+
+
+.department-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 16px 40px
+        rgba(19,63,89,.1);
+
+    border-color:
+        #a9d0d1;
+}
+
+
+.card-icon {
+
+    width: 47px;
+
+    height: 47px;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #e7f2f4;
+
+    color: #237b80;
+
+    font-size: 21px;
+
+    margin-bottom: 22px;
+}
+
+
+.department-card h3 {
+
+    font:
+        600 22px
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    margin-bottom: 8px;
+}
+
+
+.department-card p {
+
+    font-size: 14px;
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+}
+
+
+.department-card a {
+
+    color: #237b80;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DOCTORS
+========================= */
+
+.doctors-section {
+
+    max-width: none;
+
+    background: var(--cream);
+}
+
+
+.doctors-section > .section-heading,
+.doctors-section > .doctor-grid {
+
+    max-width: 1180px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.doctor-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 18px;
+}
+
+
+.doctor-card {
+
+    background: white;
+
+    border:
+        1px solid var(--line);
+
+    overflow: hidden;
+}
+
+
+.doctor-photo {
+
+    height: 290px;
+
+    background-size: cover;
+
+    background-position:
+        center top;
+}
+
+
+.photo-1 {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=80");
+}
+
+
+.photo-2 {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=80");
+}
+
+
+.photo-3 {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&q=80");
+}
+
+
+.photo-4 {
+
+    background-image:
+        url("https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=80");
+}
+
+
+.doctor-info {
+
+    padding: 21px;
+}
+
+
+.availability {
+
+    font-size: 11px;
+
+    color: #3a9b76;
+
+    font-weight: 700;
+}
+
+
+.doctor-info h3 {
+
+    font:
+        600 20px
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    margin-top: 5px;
+}
+
+
+.doctor-info > p {
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-bottom: 15px;
+}
+
+
+.text-btn {
+
+    color: #237b80;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    border: 0;
+
+    background: none;
+
+    padding: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   VISITOR POLICY
+========================= */
+
+.visitor-section {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    min-height: 650px;
+
+    background: #edf4f3;
+}
+
+
+.visitor-image {
+
+    background:
+        url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=85")
+        center / cover;
+}
+
+
+.visitor-content {
+
+    padding:
+        90px max(7vw,50px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.visitor-content h2 {
+
+    font:
+        500 44px/1.12
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    max-width: 600px;
+
+    margin-bottom: 20px;
+}
+
+
+.visitor-content > p {
+
+    color: var(--muted);
+
+    max-width: 600px;
+}
+
+
+.policy-list {
+
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 22px;
+}
+
+
+.policy-list > div {
+
+    display: flex;
+
+    gap: 14px;
+}
+
+
+.policy-list span {
+
+    font-size: 12px;
+
+    color: #49a39b;
+
+    font-weight: 700;
+}
+
+
+.policy-list p {
+
+    font-size: 13px;
+
+    color: var(--muted);
+}
+
+
+.policy-list strong {
+
+    color: var(--ink);
+}
+
+
+/* =========================
+   APPOINTMENT
+========================= */
+
+.appointment-section {
+
+    display: grid;
+
+    grid-template-columns:
+        .85fr 1.15fr;
+
+    gap: 90px;
+}
+
+
+.appointment-intro {
+
+    padding-top: 10px;
+}
+
+
+.appointment-intro h2 {
+
+    margin-bottom: 20px;
+}
+
+
+.appointment-intro > p {
+
+    color: var(--muted);
+
+    max-width: 440px;
+}
+
+
+.appointment-note {
+
+    margin-top: 35px;
+
+    border-left:
+        3px solid var(--teal);
+
+    padding:
+        15px 18px;
+
+    background: #f3f8f7;
+
+    font-size: 14px;
+}
+
+
+.appointment-note a {
+
+    color: #168477;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.appointment-form {
+
+    border:
+        1px solid var(--line);
+
+    padding: 32px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 45px
+        rgba(30,70,90,.07);
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.appointment-form label {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #536675;
+
+    margin-bottom: 18px;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding:
+        13px 14px;
+
+    border:
+        1px solid #ccd9df;
+
+    border-radius: 3px;
+
+    outline: none;
+
+    background: white;
+
+    color: var(--ink);
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #4ba99e;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(75,169,158,.1);
+}
+
+
+.full-btn {
+
+    width: 100%;
+
+    margin-top: 3px;
+}
+
+
+.form-success {
+
+    margin-top: 15px;
+
+    color: #22866f;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    min-height: 20px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+
+    padding-top: 50px;
+}
+
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 18px;
+}
+
+
+.contact-card {
+
+    padding: 28px;
+
+    border:
+        1px solid var(--line);
+
+    background: #fafcfc;
+}
+
+
+.contact-card > span {
+
+    font-size: 24px;
+
+    color: #35958e;
+}
+
+
+.contact-card h3 {
+
+    font:
+        600 20px
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    margin:
+        10px 0 7px;
+}
+
+
+.contact-card p {
+
+    font-size: 14px;
+
+    color: var(--muted);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #123a55;
+
+    color: #dce9ef;
+}
+
+
+.footer-inner {
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding: 35px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    font-size: 13px;
+}
+
+
+footer .brand {
+
+    color: white;
+}
+
+
+footer .brand-icon {
+
+    background: #347da9;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(8,28,43,.6);
+
+    z-index: 2000;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.modal.open {
+
+    display: flex;
+}
+
+
+.modal-box {
+
+    position: relative;
+
+    background: white;
+
+    padding: 45px;
+
+    max-width: 480px;
+
+    width: 100%;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.25);
+}
+
+
+.modal-box h2 {
+
+    font:
+        500 34px
+        "Playfair Display",
+        Georgia,
+        serif;
+
+    margin:
+        8px 0 12px;
+}
+
+
+.modal-box p {
+
+    color: var(--muted);
+
+    margin-bottom: 25px;
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    right: 17px;
+
+    top: 12px;
+
+    border: 0;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #6c7a83;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px) {
+
+    .nav-links {
+
+        gap: 17px;
+
+        font-size: 13px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 50px;
+    }
+
+
+    .hero-content {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats-grid {
+
+        max-width: 600px;
+    }
+
+
+    .doctor-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:760px) {
+
+    .nav-container {
+
+        height: 68px;
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 68px;
+
+        left: 0;
+
+        right: 0;
+
+        background: white;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 18px 25px;
+
+        box-shadow:
+            0 10px 25px
+            rgba(0,0,0,.08);
+    }
+
+
+    .nav-links.open {
+
+        display: flex;
+    }
+
+
+    .nav-links a {
+
+        padding: 8px 0;
+    }
+
+
+    .nav-cta {
+
+        text-align: center;
+
+        margin-top: 5px;
+    }
+
+
+    .hero {
+
+        margin-top: 68px;
+
+        min-height: auto;
+    }
+
+
+    .hero-content {
+
+        min-height: auto;
+
+        padding:
+            105px 22px
+            55px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 43px;
+    }
+
+
+    .hero-copy > p {
+
+        font-size: 16px;
+    }
+
+
+    .stats-grid {
+
+        gap: 10px;
+    }
+
+
+    .stat-card {
+
+        min-height: 100px;
+    }
+
+
+    .stat-card strong {
+
+        font-size: 27px;
+    }
+
+
+    .trust-strip {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .trust-strip div {
+
+        border-bottom:
+            1px solid var(--line);
+    }
+
+
+    .section {
+
+        padding:
+            75px 22px;
+    }
+
+
+    .section-heading {
+
+        display: block;
+    }
+
+
+    .section-heading > p {
+
+        margin-top: 15px;
+    }
+
+
+    .section-heading h2,
+    .appointment-intro h2,
+    .visitor-content h2 {
+
+        font-size: 38px;
+    }
+
+
+    .department-grid,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .doctor-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .doctor-photo {
+
+        height: 230px;
+    }
+
+
+    .visitor-section {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .visitor-image {
+
+        min-height: 360px;
+    }
+
+
+    .visitor-content {
+
+        padding:
+            65px 22px;
+    }
+
+
+    .policy-list {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .appointment-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-inner {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px) {
+
+    .hero-actions {
+
+        flex-direction: column;
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .doctor-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .doctor-photo {
+
+        height: 290px;
+    }
+
+}
